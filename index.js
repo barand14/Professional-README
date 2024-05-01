@@ -1,5 +1,5 @@
 // TODO: Include packages needed for this application
-const generatateMarkdown = require("./utils/generateMarkdown.js"); //importe generatateMarkdown function
+const generatateMarkdown = require("./generateMarkdown.js"); //importe generatateMarkdown function
 const inquirer = require("inquirer");
 const fs = require("fs");
 
@@ -18,7 +18,7 @@ const questions = [
         {
             type: "input",
             name: "installation",
-            message: "please enter any installationn instructions",
+            message: "please enter any installation instructions",
             },
 
 
@@ -36,11 +36,11 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.createPrompt(questions)
-    .then((answers) => {
-        const fileName = "README.md";
-        writeToFile(fileName, answers);
-    })
+    inquirer.prompt(questions)
+    .then((data) => {
+        console.log(data)
+    }  
+)
     .catch((error) => {
         console.error("Error occured during prompt:", error);
     });

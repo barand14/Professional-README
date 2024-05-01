@@ -25,11 +25,25 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeToFile(fileName, generatateMarkdown(data), (err) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+    })
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.createPrompt(questions)
+    .then((answers) => {
+        const fileName = "README.md";
+        writeToFile(fileName, answers);
+    })
+    .catch((error) => {
+        console.error("Error occured during prompt:", error);
+    });
 }
 
 // Function call to initialize app

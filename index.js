@@ -20,6 +20,16 @@ const questions = [
             name: "installation",
             message: "please enter any installation instructions",
             },
+            {
+                type: "input",
+                name: "usage",
+                message: "please enter any usage instructions",
+                },   {
+                    type: "input",
+                    name: "contribution",
+                    message: "please list any contribution",
+                    },
+
 
 
 ];
@@ -39,6 +49,7 @@ function init() {
     inquirer.prompt(questions)
     .then((data) => {
         console.log(data)
+        fs.writeFileSync("readmetest.md", generatateMarkdown(data))
     }  
 )
     .catch((error) => {

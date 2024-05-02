@@ -29,7 +29,12 @@ const questions = [
                     name: "contribution",
                     message: "please list any contribution",
                     },
-
+                    {
+                    type: "list",
+                    name: "license",
+                    message: "please choose the license for your app.", 
+                    choices: ["MIT", "Mozilla","ISC","Apache", "No License"]
+                    },
 
 
 ];
@@ -41,6 +46,8 @@ function writeToFile(fileName, data) {
             console.error(err);
             return;
         }
+
+        console.log("README.md has been successfully generated!");
     })
 }
 

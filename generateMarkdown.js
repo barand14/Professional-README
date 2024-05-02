@@ -55,7 +55,7 @@ ${renderLicenseBadge(data.license)}
   ## Questions
   Feel free tcontact me at: ${data.email}
   <br>
-  Check out my work at: [Github](http://https://github.com/${data.github}/)
+  Check out my work at: [Github](https://github.com/barand14/) ${data.github}
 
 `;
 }

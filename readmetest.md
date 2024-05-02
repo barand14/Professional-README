@@ -1,4 +1,4 @@
-# readme
+# Readme
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
@@ -11,7 +11,7 @@
 6. [Questions](questions)
 
   ## Description
-  generate me
+  Generate readme
   
   ## Installation
   npm i
@@ -28,5 +28,5 @@
   ## Questions
   Feel free tcontact me at: undefined
   <br>
-  Check out my work at: [Github](http://https://github.com/undefined/)
+  Check out my work at: [Github](https://github.com/barand14/) undefined
 
